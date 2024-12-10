@@ -207,7 +207,7 @@ textarea:not([rows]) {
   font-weight: 100;
   color: var(--blue-300);
 }
-.mainCard img {
+.mainCard .card-info img {
   max-width: 4.87rem;
   border-radius: 50%;
   border: 3px solid #fff;
