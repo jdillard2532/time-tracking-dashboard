@@ -1,0 +1,286 @@
+body {
+  font-family: var(--font-primary);
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 1.88rem;
+  max-width: 69.38rem;
+  margin: 0 2rem;
+}
+
+.multiCardSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.1478873239rem + 1.5023474178vw, 2.5rem);
+  font-weight: 300;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  section {
+    height: auto;
+  }
+  .container {
+    display: grid;
+    min-width: 20.44rem;
+  }
+  .multiCardSection {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    margin: 2rem;
+  }
+  .container .mainCard {
+    max-width: none;
+  }
+  .container .mainCard ul {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .container .mainCard ul li {
+    padding: 0;
+  }
+  .container .mainCard .card-info {
+    display: flex;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .container .mainCard .card-info div {
+    margin: 0;
+  }
+  .cardSection .card .timeCategory {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0;
+  }
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root {
+  --font-primary: "Rubik", sans-serif;
+  --background-color: hsl(226, 43%, 10%);
+  --card-background-color: hsl(235, 46%, 20%);
+  --text-color: hsl(0, 0%, 100%);
+  --orange: hsl(15, 100%, 70%);
+  --softblue: hsl(195, 74%, 62%);
+  --lightred: hsl(348, 100%, 68%);
+  --limegreen: hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --softorange: hsl(43, 84%, 65%);
+  --blue-100: hsl(246, 80%, 60%);
+  --blue-200: hsl(235, 45%, 61%);
+  --blue-300: hsl(236, 100%, 87%);
+}
+
+.mainCard {
+  background-color: var(--card-background-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  max-width: 15.94rem;
+}
+.mainCard .card-info {
+  background-color: var(--blue-100);
+  padding: 2.69rem 5.25rem 6rem 2rem;
+  border-radius: 15px;
+}
+.mainCard .card-info div {
+  margin-top: 2.69rem;
+}
+.mainCard .card-info p {
+  font-size: 0.94rem;
+  font-weight: 100;
+  color: var(--blue-300);
+}
+.mainCard img {
+  max-width: 4.87rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.mainCard ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0 2rem 1rem 2rem;
+  margin: 0;
+}
+.mainCard ul li {
+  padding: 1.31rem 0 0 0;
+}
+.mainCard ul li:hover {
+  cursor: pointer;
+}
+
+.cardSection {
+  position: relative;
+  background-color: var(--orange);
+  border-radius: 15px;
+  max-height: 15.31rem;
+  z-index: 999;
+}
+.cardSection .cardImage {
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding: 0 1rem;
+  z-index: -1;
+}
+.cardSection .cardImage img {
+  position: absolute;
+}
+.cardSection .card {
+  background-color: var(--card-background-color);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 3rem;
+  width: 100%;
+}
+.cardSection .card:hover {
+  background-color: #33397a;
+  cursor: pointer;
+}
+.cardSection .card .category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardSection .card h1 {
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.4718309859rem + 2.2535211268vw, 3.5rem);
+}
+
+.timeCategory {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-right: 4rem;
+}
+.timeCategory p {
+  font-size: 0.94rem;
+  color: var(--blue-300);
+}
+
+li {
+  color: var(--blue-200);
+}
+
+.active {
+  color: var(--text-color);
+}/*# sourceMappingURL=style.css.map */
